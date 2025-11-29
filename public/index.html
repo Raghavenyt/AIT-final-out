@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AIT — AI Toolbox</title>
+  <meta name="description" content="AIT - Discover and bookmark AI tools by purpose" />
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <!-- Hammer SVG (simple) -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 21l4-1 1 1 8-8-4-4 7-7 2 2-7 7 4 4-8 8-1-1-4 1z" fill="#000"></path>
+        </svg>
+      </div>
+      <div class="title">
+        <h1>AIT</h1>
+        <p>AI Toolbox — discover & bookmark tools</p>
+      </div>
+      <div style="margin-left:auto"></div>
+    </header>
+
+    <div class="top-actions">
+      <div class="search" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <input id="searchInput" placeholder="Search tools or categories..." />
+        <button class="action-btn" id="openFavs">Favorites</button>
+      </div>
+    </div>
+
+    <section class="grid" id="categoryGrid" aria-label="Categories">
+      <!-- Cards injected by JS -->
+    </section>
+
+    <div class="fav-bar" id="favBar" aria-live="polite">
+      <!-- Favorite chips -->
+    </div>
+
+    <footer>
+      <small>Built with ❤️ • Black · White · Grey theme</small>
+    </footer>
+  </div>
+
+  <!-- Overlay modal for tools -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <div class="modal-head">
+        <h2 id="modalTitle">Category</h2>
+        <div>
+          <button class="action-btn" id="closeModal">Close</button>
+        </div>
+      </div>
+
+      <div style="margin-top:8px; display:flex; gap:8px; align-items:center;">
+        <input id="toolFilter" placeholder="Filter tools in this category..." style="flex:1; padding:8px; border-radius:10px; border:1px solid rgba(0,0,0,0.06)" />
+      </div>
+
+      <div class="tools" id="toolsList" style="margin-top:12px;">
+        <!-- Tools injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- App logic -->
+  <script src="app.js"></script>
+</body>
+</html>
