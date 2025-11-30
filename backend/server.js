@@ -67,14 +67,7 @@ let tools = [
   },
 
   // image
-  {
-    id: "dalle",
-    categoryId: "image",
-    name: "DALL·E",
-    short: "Image generation",
-    price: "Paid",
-    url: "https://openai.com/dall-e-2"
-  },
+
   {
     id: "midjourney",
     categoryId: "image",
