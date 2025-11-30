@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const { url } = require("inspector");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -113,7 +114,19 @@ let tools = [
     short: "Automate tasks",
     price: "Freemium",
     url: "https://zapier.com"
+  },
+  { 
+    id:"Perplexity",
+    categoryId: "productivity",
+    name: "Perplexity",
+    short:"Summa Thaan ",
+    price:"Free/Paid",
+    url: "https://www.perplexity.ai"
+
+
+
   }
+
 ];
 
 let nextIdCounter = 1;
