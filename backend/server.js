@@ -357,71 +357,81 @@ let tools = [
   },
 
   // productivity
-    {
-    "id": "suno",
-    "categoryId": "audio",
-    "name": "Suno",
-    "short": "AI music & song generator (instrumentals + vocals) — free tier available",
-    "price": "Free/Paid",
-    "url": "https://suno.com"
+  {
+    id: "zapier",
+    categoryId: "productivity",
+    name: "Zapier AI",
+    short: "Automate tasks",
+    price: "Freemium",
+    url: "https://zapier.com"
+  },
+  { 
+    id:"Perplexity",
+    categoryId: "productivity",
+    name: "Perplexity",
+    short:"Summarize your shedule  ",
+    price:"Free",
+    url: "https://www.perplexity.ai"
+
   },
   {
-    "id": "diffrhythm",
-    "categoryId": "audio",
-    "name": "DiffRhythm",
-    "short": "Open-source music generation model (vocals + instruments, full songs)",
+    "id": "n8n",
+    "categoryId": "automation",
+    "name": "n8n",
+    "short": "Open-source workflow & automation builder (drag-drop, no-code)",
     "price": "Free",
-    "url": "https://github.com/…/DiffRhythm"
+    "url": "https://n8n.io"
   },
   {
-    "id": "yue_ai",
-    "categoryId": "audio",
-    "name": "YuE (Yue AI)",
-    "short": "Lyrics-to-song / full-song generation model, open-source",
+    "id": "activepieces",
+    "categoryId": "automation",
+    "name": "Activepieces",
+    "short": "No-code, open-source workflow automation (Zapier-style)",
     "price": "Free",
-    "url": "https://github.com/multimodal-art-projection/YuE"
+    "url": "https://activepieces.com"
   },
   {
-    "id": "musicgen",
-    "categoryId": "audio",
-    "name": "MusicGen",
-    "short": "Open-source model for generating music from text prompts",
+    "id": "make",
+    "categoryId": "automation",
+    "name": "Make",
+    "short": "Visual automation builder — link apps, automate tasks, add AI steps",
+    "price": "Free/Paid",
+    "url": "https://www.make.com"
+  },
+  {
+    "id": "zapier",
+    "categoryId": "automation",
+    "name": "Zapier",
+    "short": "Popular no-code automation — integrates many apps and services",
+    "price": "Free/Paid",
+    "url": "https://zapier.com"
+  },
+  {
+    "id": "leon",
+    "categoryId": "automation",
+    "name": "Leon",
+    "short": "Open-source personal assistant for automating tasks on your server/desktop",
     "price": "Free",
-    "url": "https://huggingface.co/models/musicgen"
+    "url": "https://getleon.ai"
   },
   {
-    "id": "udio",
-    "categoryId": "audio",
-    "name": "Udio",
-    "short": "Generative text-to-music model (free beta available)",
-    "price": "Free/Paid",
-    "url": "https://www.udio.com"
+    "id": "botpress",
+    "categoryId": "automation",
+    "name": "Botpress (AI Agents)",
+    "short": "Free AI-agent framework to build automation or chatbot workflows",
+    "price": "Free",
+    "url": "https://botpress.com"
   },
   {
-    "id": "beatoven",
-    "categoryId": "audio",
-    "name": "Beatoven.ai",
-    "short": "AI background-music / soundtrack generator — free tier available",
-    "price": "Free/Paid",
-    "url": "https://beatoven.ai"
-  },
-  {
-    "id": "mubert",
-    "categoryId": "audio",
-    "name": "Mubert",
-    "short": "AI-generated royalty-free music generation for creators",
-    "price": "Free/Paid",
-    "url": "https://mubert.com"
-  },
-  {
-    "id": "soundverse",
-    "categoryId": "audio",
-    "name": "Soundverse AI",
-    "short": "Free AI music generator with voice & instrument support",
-    "price": "Free/Paid",
-    "url": "https://soundverse.ai"
+    "id": "ui_vision_rpa",
+    "categoryId": "automation",
+    "name": "Ui.Vision RPA",
+    "short": "Free web-automation and RPA tool — web scraping, form filling, task automation",
+    "price": "Free",
+    "url": "https://ui.vision"
   }
-    
+
+
 ];
 
 let nextIdCounter = 1;
