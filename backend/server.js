@@ -153,7 +153,7 @@ let tools = [
 
   {
     "id": "stable_diffusion",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "Stable Diffusion",
     "short": "Open-source text-to-image model; highly customizable",
     "price": "Free",
@@ -161,7 +161,7 @@ let tools = [
   },
   {
     "id": "deepai_text2img",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "DeepAI Text2Image",
     "short": "Simple free online text-to-image generation",
     "price": "Free",
@@ -169,7 +169,7 @@ let tools = [
   },
   {
     "id": "mage_space",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "Mage.space",
     "short": "AI image & video generator — free, fast, and unlimited",
     "price": "Free",
@@ -177,7 +177,7 @@ let tools = [
   },
   {
     "id": "runway_ml",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "Runway ML",
     "short": "Text-to-video or image-to-video generation, beginner-friendly",
     "price": "Free",
@@ -185,7 +185,7 @@ let tools = [
   },
   {
     "id": "pixverse",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "PixVerse",
     "short": "Budget-friendly AI video generator — good for quick clips & social media",
     "price": "Free",
@@ -193,7 +193,7 @@ let tools = [
   },
   {
     "id": "skyreels_v1",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "SkyReels V1",
     "short": "Open-source video generation model (text-to-video / image-to-video)",
     "price": "Free",
@@ -201,7 +201,7 @@ let tools = [
   },
   {
     "id": "waver",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "Waver",
     "short": "Unified image & video generation model (text-to-video, image-to-video, text-to-image)",
     "price": "Free",
@@ -209,7 +209,7 @@ let tools = [
   },
   {
     "id": "step_video_ti2v",
-    "categoryId": "image_video",
+    "categoryId": "image",
     "name": "Step-Video-TI2V",
     "short": "State-of-the-art open model for text/image to video generation",
     "price": "Free",
@@ -285,7 +285,7 @@ let tools = [
   // research
   {
     "id": "bart_large_cnn",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "BART (facebook/bart-large-cnn)",
     "short": "Strong open-source abstractive summarization model",
     "price": "Free",
@@ -293,7 +293,7 @@ let tools = [
   },
   {
     "id": "t5_small_summarization",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "T5 (small) Summarization",
     "short": "Lightweight text-to-text transformer for summarizing documents",
     "price": "Free",
@@ -301,7 +301,7 @@ let tools = [
   },
   {
     "id": "sumy",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "Sumy",
     "short": "Classic extractive summarization library (LSA, LexRank, etc.)",
     "price": "Free",
@@ -309,7 +309,7 @@ let tools = [
   },
   {
     "id": "bert_extractive_summarizer",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "BERT Extractive Summarizer",
     "short": "Use BERT embeddings to extract key sentences from text",
     "price": "Free",
@@ -317,7 +317,7 @@ let tools = [
   },
   {
     "id": "smeval",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "SumEval",
     "short": "Open framework for summarization & evaluation, supports multiple languages",
     "price": "Free",
@@ -325,7 +325,7 @@ let tools = [
   },
   {
     "id": "summer_time_toolkit",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "SummerTime",
     "short": "Toolkit for multi-document & query-based summarization for non-experts",
     "price": "Free",
@@ -333,7 +333,7 @@ let tools = [
   },
   {
     "id": "open_text_summarizer",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "Open Text Summarizer",
     "short": "Simple free web-based summarizer for plain text / web pages",
     "price": "Free",
@@ -341,7 +341,7 @@ let tools = [
   },
   {
     "id": "quillbot_summarizer",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "QuillBot Summarizer",
     "short": "Easy free online summarization for articles, documents",
     "price": "Free/Paid",
@@ -349,7 +349,7 @@ let tools = [
   },
   {
     "id": "tldr_this",
-    "categoryId": "summarization",
+    "categoryId": "research",
     "name": "TLDR This",
     "short": "Online AI summarizer for articles and webpages",
     "price": "Free/Paid",
@@ -375,16 +375,17 @@ let tools = [
 
   },
   {
-    "id": "n8n",
-    "categoryId": "automation",
-    "name": "n8n",
-    "short": "Open-source workflow & automation builder (drag-drop, no-code)",
-    "price": "Free",
-    "url": "https://n8n.io"
+    id:"n8n",
+    categories:"productivity",
+    name:"n8n",
+    short:"Open source workflow & automation builder (drag & drop, no-code)",
+    price:"Free",
+    url:"https://n8n.io"
+   
   },
   {
     "id": "activepieces",
-    "categoryId": "automation",
+    "categoryId": "productivity",
     "name": "Activepieces",
     "short": "No-code, open-source workflow automation (Zapier-style)",
     "price": "Free",
@@ -392,23 +393,16 @@ let tools = [
   },
   {
     "id": "make",
-    "categoryId": "automation",
+    "categoryId": "productivity",
     "name": "Make",
     "short": "Visual automation builder — link apps, automate tasks, add AI steps",
     "price": "Free/Paid",
     "url": "https://www.make.com"
   },
-  {
-    "id": "zapier",
-    "categoryId": "automation",
-    "name": "Zapier",
-    "short": "Popular no-code automation — integrates many apps and services",
-    "price": "Free/Paid",
-    "url": "https://zapier.com"
-  },
+
   {
     "id": "leon",
-    "categoryId": "automation",
+    "categoryId": "productivity",
     "name": "Leon",
     "short": "Open-source personal assistant for automating tasks on your server/desktop",
     "price": "Free",
@@ -416,7 +410,7 @@ let tools = [
   },
   {
     "id": "botpress",
-    "categoryId": "automation",
+    "categoryId": "productivity",
     "name": "Botpress (AI Agents)",
     "short": "Free AI-agent framework to build automation or chatbot workflows",
     "price": "Free",
@@ -424,7 +418,7 @@ let tools = [
   },
   {
     "id": "ui_vision_rpa",
-    "categoryId": "automation",
+    "categoryId": "productivity",
     "name": "Ui.Vision RPA",
     "short": "Free web-automation and RPA tool — web scraping, form filling, task automation",
     "price": "Free",

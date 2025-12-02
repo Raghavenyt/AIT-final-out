@@ -31,18 +31,91 @@ header{
   margin-bottom:18px;
 }
 .logo {
-  width:56px;
-  height:56px;
-  border-radius:12px;
-  background:linear-gradient(180deg,var(--grey-200),var(--grey-100));
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--black);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-  flex-shrink:0;
+  
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
-.logo svg{width:30px;height:30px}
+
+.logo img {
+  
+  display: block;
+  width: 100px;      /* your existing size */
+  border-radius: 999px;   /* 👈 adds rounded corners */
+
+  display: block;
+  width: 200px;      /* adjust size */
+}
+
+/* Glossy shine */
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+}
+
+/* Trigger the animation on hover */
+.logo:hover::before {
+  animation: shine 0.8s forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+/* Rounded glossy logo */
+.logo {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;          /* required so shine stays inside corners */
+  border-radius: 16px;       /* adjust to your liking */
+}
+
+.logo img {
+  display: block;
+  width: 65px;              /* your logo size */
+  border-radius: 16px;       /* same radius as .logo */
+}
+
+/* Gloss shine layer for rounded logo */
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  border-radius: 16px;        /* this keeps shine rounded */
+  pointer-events: none;
+}
+
+/* Hover triggers shine */
+.logo:hover::before {
+  animation: shine 0.9s forwards;
+}
+
 
 .title {
   display:flex;
@@ -145,9 +218,78 @@ header{
 
 /* Footer */
 footer{margin-top:30px; text-align:center; color:var(--grey-500); font-size:13px}
+/* -------------------------------------------- */
+/* UNIVERSAL GLOSSY EFFECT FOR ALL LOGO ELEMENTS */
+/* -------------------------------------------- */
+
+/* Add .glossy to any element you want shiny */
+.glossy,
+.logo,
+.card .icon,
+.tool .icon {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine layer */
+.glossy::before,
+.logo::before,
+.card .icon::before,
+.tool .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+/* Trigger animation */
+.glossy:hover::before,
+.logo:hover::before,
+.card .icon:hover::before,
+.tool .icon:hover::before {
+  animation: shine 0.8s forwards;
+}
+/* Glossy on card hover */
+.card .icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+/* Trigger shine when hovering the WHOLE CARD */
+.card:hover .icon::before {
+  animation: shine 0.8s forwards;
+}
 
 /* Responsive tweaks */
 @media (max-width:520px){
+  
   .search{flex-basis:100%}
   .logo{width:48px;height:48px}
 }
