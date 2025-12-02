@@ -423,6 +423,18 @@ let tools = [
     "short": "Free web-automation and RPA tool — web scraping, form filling, task automation",
     "price": "Free",
     "url": "https://ui.vision"
+  },
+  {
+    id:"Smart Queue",
+    categoryId:"productivity",
+    name:"Smart Queue",
+    short:"Dont wait for queue anymore",
+    price:"Free",
+    url:"https://smart-queue-tizw.onrender.com"
+
+
+
+
   }
 
 
