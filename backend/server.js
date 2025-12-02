@@ -20,6 +20,7 @@ const categories = [
   { id: "audio",        title: "Audio & Music",   desc: "Audio tools & speech." },
   { id: "research",     title: "Research AI",     desc: "Summarizers & analysts." },
   { id: "productivity", title: "Productivity",    desc: "Automation & task helpers." }
+
 ];
 
 let tools = [
@@ -29,35 +30,116 @@ let tools = [
     categoryId: "content",
     name: "ChatGPT",
     short: "Conversational writing & ideas",
-    price: "Free/Paid",
+    price: "Free",
     url: "https://chat.openai.com"
   },
   {
-    id: "jasper",
-    categoryId: "content",
-    name: "Jasper AI",
-    short: "Marketing copy & long-form",
-    price: "Paid",
-    url: "https://www.jasper.ai"
+    "id": "copyai",
+    "categoryId": "content",
+    "name": "Copy.ai",
+    "short": "Marketing copy & social content",
+    "price": "Free",
+    "url": "https://www.copy.ai"
   },
   {
-    id: "copyai",
-    categoryId: "content",
-    name: "Copy.ai",
-    short: "Quick content snippets",
-    price: "Freemium",
-    url: "https://www.copy.ai"
+    "id": "writesonic",
+    "categoryId": "content",
+    "name": "Writesonic",
+    "short": "Blogs, ads & content generation",
+    "price": "Free",
+    "url": "https://writesonic.com"
+  },
+  {
+    "id": "wordtune",
+    "categoryId": "content",
+    "name": "Wordtune",
+    "short": "Rewrite, improve and polish text",
+    "price": "Free",
+    "url": "https://www.wordtune.com"
+  },
+  {
+    "id": "quillbot",
+    "categoryId": "content",
+    "name": "QuillBot",
+    "short": "Paraphrasing & grammar correction",
+    "price": "Free",
+    "url": "https://quillbot.com"
+  },
+  {
+    "id": "rytr",
+    "categoryId": "content",
+    "name": "Rytr",
+    "short": "Fast short-form content generator",
+    "price": "Free",
+    "url": "https://rytr.me"
+  },
+  {
+    "id": "smartcat",
+    "categoryId": "content",
+    "name": "Smartcat",
+    "short": "Translation + multilingual content",
+    "price": "Free",
+    "url": "https://www.smartcat.com"
   },
 
   // coding
-  {
-    id: "copilot",
-    categoryId: "coding",
-    name: "GitHub Copilot",
-    short: "Code autocompletion",
-    price: "Paid",
-    url: "https://github.com/features/copilot"
+   {
+    "id": "codeium",
+    "categoryId": "coding",
+    "name": "Codeium",
+    "short": "Free AI code completion & suggestions",
+    "price": "Free",
+    "url": "https://codeium.com"
   },
+  {
+    "id": "codegeex",
+    "categoryId": "coding",
+    "name": "CodeGeeX",
+    "short": "Open-source multilingual code generation",
+    "price": "Free",
+    "url": "https://github.com/THUDM/CodeGeeX"
+  },
+  {
+    "id": "tabby",
+    "categoryId": "coding",
+    "name": "Tabby",
+    "short": "Self-hosted coding assistant & autocomplete",
+    "price": "Free",
+    "url": "https://github.com/TabbyML/tabby"
+  },
+  {
+    "id": "codet5",
+    "categoryId": "coding",
+    "name": "CodeT5",
+    "short": "Open-source model for code understanding & generation",
+    "price": "Free",
+    "url": "https://github.com/salesforce/CodeT5"
+  },
+  {
+    "id": "codebert",
+    "categoryId": "coding",
+    "name": "CodeBERT",
+    "short": "AI model for code search and documentation",
+    "price": "Free",
+    "url": "https://github.com/microsoft/CodeBERT"
+  },
+  {
+    "id": "whisperer",
+    "categoryId": "coding",
+    "name": "Amazon CodeWhisperer",
+    "short": "AI code suggestion tool with free tier",
+    "price": "Free",
+    "url": "https://aws.amazon.com/codewhisperer"
+  },
+  {
+    "id": "huggingface",
+    "categoryId": "coding",
+    "name": "HuggingFace Code Models",
+    "short": "Open-source transformers for code tasks",
+    "price": "Free",
+    "url": "https://huggingface.co/models"
+  },
+
   {
     id: "tabnine",
     categoryId: "coding",
@@ -70,40 +152,208 @@ let tools = [
   // image
 
   {
-    id: "midjourney",
-    categoryId: "image",
-    name: "Midjourney",
-    short: "Artistic image maker",
-    price: "Paid",
-    url: "https://www.midjourney.com"
+    "id": "stable_diffusion",
+    "categoryId": "image_video",
+    "name": "Stable Diffusion",
+    "short": "Open-source text-to-image model; highly customizable",
+    "price": "Free",
+    "url": "https://stability.ai"
+  },
+  {
+    "id": "deepai_text2img",
+    "categoryId": "image_video",
+    "name": "DeepAI Text2Image",
+    "short": "Simple free online text-to-image generation",
+    "price": "Free",
+    "url": "https://deepai.org/machine-learning-model/text2img"
+  },
+  {
+    "id": "mage_space",
+    "categoryId": "image_video",
+    "name": "Mage.space",
+    "short": "AI image & video generator — free, fast, and unlimited",
+    "price": "Free",
+    "url": "https://mage.space"
+  },
+  {
+    "id": "runway_ml",
+    "categoryId": "image_video",
+    "name": "Runway ML",
+    "short": "Text-to-video or image-to-video generation, beginner-friendly",
+    "price": "Free",
+    "url": "https://runwayml.com"
+  },
+  {
+    "id": "pixverse",
+    "categoryId": "image_video",
+    "name": "PixVerse",
+    "short": "Budget-friendly AI video generator — good for quick clips & social media",
+    "price": "Free",
+    "url": "https://pixverse.ai"
+  },
+  {
+    "id": "skyreels_v1",
+    "categoryId": "image_video",
+    "name": "SkyReels V1",
+    "short": "Open-source video generation model (text-to-video / image-to-video)",
+    "price": "Free",
+    "url": "https://github.com/skyreels/skyreels"
+  },
+  {
+    "id": "waver",
+    "categoryId": "image_video",
+    "name": "Waver",
+    "short": "Unified image & video generation model (text-to-video, image-to-video, text-to-image)",
+    "price": "Free",
+    "url": "https://github.com/FoundationVision/Waver"
+  },
+  {
+    "id": "step_video_ti2v",
+    "categoryId": "image_video",
+    "name": "Step-Video-TI2V",
+    "short": "State-of-the-art open model for text/image to video generation",
+    "price": "Free",
+    "url": "https://github.com/stepfun-ai/Step-Video-TI2V"
   },
 
   // audio
   {
-    id: "descript",
-    categoryId: "audio",
-    name: "Descript",
-    short: "Audio editing & AI",
-    price: "Paid",
-    url: "https://www.descript.com"
+    "id": "suno",
+    "categoryId": "audio",
+    "name": "Suno",
+    "short": "AI music & song generator (instrumentals + vocals) — free tier available",
+    "price": "Free",
+    "url": "https://suno.com"
   },
   {
-    id: "lovo",
-    categoryId: "audio",
-    name: "LOVO",
-    short: "AI voices & speech",
-    price: "Paid",
-    url: "https://lovo.ai"
+    "id": "diffrhythm",
+    "categoryId": "audio",
+    "name": "DiffRhythm",
+    "short": "Open-source music generation model (vocals + instruments, full songs)",
+    "price": "Free",
+    "url": "https://github.com/…/DiffRhythm"
+  },
+  {
+    "id": "yue_ai",
+    "categoryId": "audio",
+    "name": "YuE (Yue AI)",
+    "short": "Lyrics-to-song / full-song generation model, open-source",
+    "price": "Free",
+    "url": "https://github.com/multimodal-art-projection/YuE"
+  },
+  {
+    "id": "musicgen",
+    "categoryId": "audio",
+    "name": "MusicGen",
+    "short": "Open-source model for generating music from text prompts",
+    "price": "Free",
+    "url": "https://huggingface.co/models/musicgen"
+  },
+  {
+    "id": "udio",
+    "categoryId": "audio",
+    "name": "Udio",
+    "short": "Generative text-to-music model (free beta available)",
+    "price": "Free",
+    "url": "https://www.udio.com"
+  },
+  {
+    "id": "beatoven",
+    "categoryId": "audio",
+    "name": "Beatoven.ai",
+    "short": "AI background-music / soundtrack generator — free tier available",
+    "price": "Free",
+    "url": "https://beatoven.ai"
+  },
+  {
+    "id": "mubert",
+    "categoryId": "audio",
+    "name": "Mubert",
+    "short": "AI-generated royalty-free music generation for creators",
+    "price": "Free",
+    "url": "https://mubert.com"
+  },
+  {
+    "id": "soundverse",
+    "categoryId": "audio",
+    "name": "Soundverse AI",
+    "short": "Free AI music generator with voice & instrument support",
+    "price": "Free",
+    "url": "https://soundverse.ai"
   },
 
   // research
   {
-    id: "scisummary",
-    categoryId: "research",
-    name: "ScribeAI",
-    short: "Summarize papers & docs",
-    price: "Paid",
-    url: "https://scribe.com"
+    "id": "bart_large_cnn",
+    "categoryId": "summarization",
+    "name": "BART (facebook/bart-large-cnn)",
+    "short": "Strong open-source abstractive summarization model",
+    "price": "Free",
+    "url": "https://huggingface.co/facebook/bart-large-cnn"
+  },
+  {
+    "id": "t5_small_summarization",
+    "categoryId": "summarization",
+    "name": "T5 (small) Summarization",
+    "short": "Lightweight text-to-text transformer for summarizing documents",
+    "price": "Free",
+    "url": "https://huggingface.co/Falconsai/text_summarization"
+  },
+  {
+    "id": "sumy",
+    "categoryId": "summarization",
+    "name": "Sumy",
+    "short": "Classic extractive summarization library (LSA, LexRank, etc.)",
+    "price": "Free",
+    "url": "https://pypi.org/project/sumy"
+  },
+  {
+    "id": "bert_extractive_summarizer",
+    "categoryId": "summarization",
+    "name": "BERT Extractive Summarizer",
+    "short": "Use BERT embeddings to extract key sentences from text",
+    "price": "Free",
+    "url": "https://github.com/dmmiller612/bert-extractive-summarizer"
+  },
+  {
+    "id": "smeval",
+    "categoryId": "summarization",
+    "name": "SumEval",
+    "short": "Open framework for summarization & evaluation, supports multiple languages",
+    "price": "Free",
+    "url": "https://github.com/your-repo-for-sumeval"
+  },
+  {
+    "id": "summer_time_toolkit",
+    "categoryId": "summarization",
+    "name": "SummerTime",
+    "short": "Toolkit for multi-document & query-based summarization for non-experts",
+    "price": "Free",
+    "url": "https://github.com/Yale-LILY/SummerTime"
+  },
+  {
+    "id": "open_text_summarizer",
+    "categoryId": "summarization",
+    "name": "Open Text Summarizer",
+    "short": "Simple free web-based summarizer for plain text / web pages",
+    "price": "Free",
+    "url": "http://www.splitbrain.org/services/ots"
+  },
+  {
+    "id": "quillbot_summarizer",
+    "categoryId": "summarization",
+    "name": "QuillBot Summarizer",
+    "short": "Easy free online summarization for articles, documents",
+    "price": "Free/Paid",
+    "url": "https://quillbot.com/summarize"
+  },
+  {
+    "id": "tldr_this",
+    "categoryId": "summarization",
+    "name": "TLDR This",
+    "short": "Online AI summarizer for articles and webpages",
+    "price": "Free/Paid",
+    "url": "https://tldrthis.com"
   },
 
   // productivity
@@ -119,14 +369,69 @@ let tools = [
     id:"Perplexity",
     categoryId: "productivity",
     name: "Perplexity",
-    short:"Summa Thaan ",
-    price:"Free/Paid",
+    short:"Summarize your shedule  ",
+    price:"Free",
     url: "https://www.perplexity.ai"
 
 
 
+  },
+  {
+    "id": "n8n",
+    "categoryId": "automation",
+    "name": "n8n",
+    "short": "Open-source workflow & automation builder (drag-drop, no-code)",
+    "price": "Free",
+    "url": "https://n8n.io"
+  },
+  {
+    "id": "activepieces",
+    "categoryId": "automation",
+    "name": "Activepieces",
+    "short": "No-code, open-source workflow automation (Zapier-style)",
+    "price": "Free",
+    "url": "https://activepieces.com"
+  },
+  {
+    "id": "make",
+    "categoryId": "automation",
+    "name": "Make",
+    "short": "Visual automation builder — link apps, automate tasks, add AI steps",
+    "price": "Free/Paid",
+    "url": "https://www.make.com"
+  },
+  {
+    "id": "zapier",
+    "categoryId": "automation",
+    "name": "Zapier",
+    "short": "Popular no-code automation — integrates many apps and services",
+    "price": "Free/Paid",
+    "url": "https://zapier.com"
+  },
+  {
+    "id": "leon",
+    "categoryId": "automation",
+    "name": "Leon",
+    "short": "Open-source personal assistant for automating tasks on your server/desktop",
+    "price": "Free",
+    "url": "https://getleon.ai"
+  },
+  {
+    "id": "botpress",
+    "categoryId": "automation",
+    "name": "Botpress (AI Agents)",
+    "short": "Free AI-agent framework to build automation or chatbot workflows",
+    "price": "Free",
+    "url": "https://botpress.com"
+  },
+  {
+    "id": "ui_vision_rpa",
+    "categoryId": "automation",
+    "name": "Ui.Vision RPA",
+    "short": "Free web-automation and RPA tool — web scraping, form filling, task automation",
+    "price": "Free",
+    "url": "https://ui.vision"
   }
-
 ];
 
 let nextIdCounter = 1;
